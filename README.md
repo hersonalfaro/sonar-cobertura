@@ -1,6 +1,6 @@
 Sonar Cobertura
 ===============
-Current version: 1.9.1 
+Current version: 1.9.2 
 ===============
 [![Build Status](https://travis-ci.org/galexandre/sonar-cobertura.svg?branch=master)](https://travis-ci.org/galexandre/sonar-cobertura) [![Code Climate](https://codeclimate.com/github/galexandre/sonar-cobertura/badges/gpa.svg)](https://codeclimate.com/github/galexandre/sonar-cobertura) [![Issue Count](https://codeclimate.com/github/galexandre/sonar-cobertura/badges/issue_count.svg)](https://codeclimate.com/github/galexandre/sonar-cobertura) [Slack](https://sonar-cobertura.slack.com/)
 
