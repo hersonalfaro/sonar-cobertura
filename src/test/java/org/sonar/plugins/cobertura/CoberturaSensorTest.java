@@ -31,6 +31,7 @@ import org.sonar.api.batch.fs.FileSystem;
 import org.sonar.api.batch.fs.InputComponent;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.fs.InputFile.Type;
+import org.sonar.api.batch.fs.internal.DefaultIndexedFile;
 import org.sonar.api.batch.fs.internal.DefaultInputFile;
 import org.sonar.api.batch.measure.Metric;
 import org.sonar.api.batch.sensor.SensorDescriptor;
@@ -51,6 +52,7 @@ import org.sonar.plugins.java.api.JavaResourceLocator;
 import java.io.File;
 import java.io.Serializable;
 import java.net.URISyntaxException;
+import java.nio.file.FileSystems;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyDouble;
@@ -211,7 +213,10 @@ public class CoberturaSensorTest {
   public void javaInterfaceHasNoCoverage() throws URISyntaxException {
     sensor.parseReport(getCoverageReport(), context);
 
-    final InputFile interfaze = new DefaultInputFile("moduleKey", "org/apache/commons/chain/Chain");
+    final InputFile interfaze = new DefaultInputFile(
+    		new DefaultIndexedFile("org/apache/commons/chain/Chain", FileSystems.getDefault().getPath("") , ""), null);
+
+        // new DefaultInputFile("moduleKey",  "org/apache/commons/chain/Chain");
 
 
     verify(newMeasure, never()).forMetric(CoreMetrics.COVERAGE);
