@@ -23,4 +23,4 @@ cache:
 notifications:
   email: false
   
-distro: precise
+dist: precise
