@@ -22,3 +22,5 @@ cache:
 
 notifications:
   email: false
+  
+distro: precise
