@@ -44,7 +44,7 @@
     <license.title>SonarQube Cobertura Plugin</license.title>
 
     <sonar.version>6.4</sonar.version>
-    <sonar-java.version>4.2</sonar-java.version>
+    <sonar-java.version>4.15</sonar-java.version>
 
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
   </properties>
